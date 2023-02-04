@@ -13,6 +13,7 @@ public class EventBlock{
 	int currentX = 485;
 	int currentY = 1;
 	int speed = 5;
+	boolean onScreen;
 
 
 	public EventBlock() {
@@ -24,13 +25,13 @@ public class EventBlock{
 		Graphics2D G2D = (Graphics2D)g;
 		G2D.setColor(Color.BLUE);
 		System.out.println(currentY + " " + currentX + " " + sideLength);
-		G2D.fillRect(475, currentY, sideLength, sideLength);
+		G2D.fillRect(x, currentY, sideLength, sideLength);
 		
 	}
 
 
 	public void fall(){
-		currentY += 5;
+		currentY += speed;
 		
 	}	
 }
